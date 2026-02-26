@@ -1,0 +1,129 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.5in,top=0.4in,bottom=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{mathpazo}
+\usepackage{xspace}
+
+% Colors (matching paper palette)
+\definecolor{accent}{HTML}{1a5276}
+\definecolor{rule}{HTML}{2c3e50}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Gabriel Pizarro},
+  pdftitle={Gabriel Pizarro -- Curriculum Vitae},
+}
+
+% Section formatting
+\titleformat{\section}
+  {\large\bfseries\color{rule}}
+  {}
+  {0em}
+  {}
+  [\vspace{-0.6em}\textcolor{rule}{\rule{\textwidth}{0.4pt}}]
+\titlespacing*{\section}{0pt}{0.6em}{0.3em}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Compact lists
+\setlist[itemize]{itemsep=1pt,parsep=0pt,topsep=2pt,left=1.5em,label=\textcolor{accent}{\textbullet}}
+
+% Entry command: \entry{Title}{Date}{Subtitle}{Description}
+\newcommand{\entry}[4]{%
+  \noindent\textbf{#1}\hfill\textit{#2}\\
+  \textit{#3}\\[-0.4em]
+  #4\par\vspace{0.5em}%
+}
+
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+  {\LARGE\bfseries Gabriel Pizarro}\\[0.2em]
+  \href{mailto:gpizarro147@gmail.com}{gpizarro147@gmail.com}
+  \quad$\cdot$\quad
+  \href{https://github.com/TheNewJavaman}{GitHub}
+  \quad$\cdot$\quad
+  \href{https://orcid.org/0009-0009-9175-832X}{ORCID}
+\end{center}
+
+% ---------- Education ----------
+\section{Education}
+
+\entry{University of California, Santa Barbara}{2023--2027}
+      {B.S.\ Computer Science, College of Creative Studies (Honors Program) \quad GPA: 3.97}{%
+  \begin{itemize}
+    \item Member of SecLab, advised by Giovanni Vigna and Christopher Kruegel
+    \item Member of Shellphish CTF team
+  \end{itemize}
+}
+
+% ---------- Experience ----------
+\section{Experience}
+
+\entry{Research Assistant}{Aug 2023--Present}
+      {UCSB SecLab}{%
+  \begin{itemize}
+    \item Built and maintained cloud infrastructure for the \$20M NSF ACTION Institute for Agent-based Cyber Threat Intelligence and Operation, directed by Giovanni Vigna
+    \item Collaborated with Broadcom on CVEX, a framework for reproducible CVE analysis
+    \item Member of ARTIPHISHELL in DARPA's AI Cyber Challenge (AIxCC); placed 5th over two years of competition at DEF CON 33
+  \end{itemize}
+}
+
+\entry{Offensive Security Intern}{Summer 2025}
+      {NVIDIA -- Data Center Systems}{%
+  \begin{itemize}
+    \item Performed vulnerability research on DGX and data center products, including firmware, BMC, and GPU-adjacent system software
+    \item Developed tooling for automated security analysis of NVIDIA's GPU server platform stack
+  \end{itemize}
+}
+
+\entry{Graphics Software Engineer (Contract)}{Jan 2024--Feb 2024}
+      {Hyper Online}{%
+  \begin{itemize}
+    \item Implemented efficient GPU-accelerated Windows rendering integration into the Unity pipeline
+  \end{itemize}
+}
+
+\entry{Graphics Software Engineer}{Jun 2022--Jun 2023}
+      {LIV}{%
+  \begin{itemize}
+    \item Implemented Unreal Engine 5 support for composited VR and real-world rendering pipeline
+    \item Performed extensive GPU optimization of the real-time rendering and compositing pipeline
+  \end{itemize}
+}
+
+% ---------- Publications ----------
+\section{Publications}
+
+\begin{enumerate}[label={[\arabic*]},nosep,left=0em]
+  \item Giulio De Pasquale, Ilya Grishchenko, Riccardo Iesari, \textbf{Gabriel Pizarro}, Lorenzo Cavallaro, Christopher Kruegel, and Giovanni Vigna.
+        ``ChainReactor: Automated Privilege Escalation Chain Discovery via AI Planning.''
+        In \textit{Proceedings of the 33rd USENIX Security Symposium (USENIX Security)}, 2024.
+        \textbf{Distinguished Artifact Award.}
+
+  \item Jonathan Ta, \textbf{Gabriel Pizarro}, Elijah Tavares, Yuqiao Li, Monica D.\ Kohler, Nalini Venkatasubramanian, and Sang-Woo Jun.
+        ``Identifying and Locating Earthquake-Induced Damage in a High-Rise Using Neural Operators.''
+        In \textit{Proceedings of the 15th International Workshop on Structural Health Monitoring (IWSHM)}, pp.\ 2165--2172, 2025.
+\end{enumerate}
+
+% ---------- Honors & Awards ----------
+\section{Honors \& Awards}
+
+\begin{itemize}
+  \item \textbf{CRA Outstanding Undergraduate Researcher}, Honorable Mention \hfill 2025, 2026
+  \item \textbf{UCSB CS Undergraduate Research}, Honorable Mention \hfill 2024, 2025
+  \item \textbf{World AI Competition for Youth (WAICY)}, Winner \hfill 2020
+  \item \textbf{Phillips Academy Capture the Flag (PACTF)}, 2nd Place Team \hfill 2019
+\end{itemize}
+
+\end{document}
